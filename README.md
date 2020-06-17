@@ -29,3 +29,32 @@ The output is as follows:
 * ++ANKARA++
 * +++++N++++
 * +++++D++++
+
+## Sample 1
+
+Please enter the input as follows:
+
+* +-++++++++
+* +-++++++++
+* +-------++
+* +-++++++++
+* +-++++++++
+* +------+++
+* +-+++-++++
+* +++++-++++
+* +++++-++++
+* ++++++++++
+* AGRA;NORWAY;ENGLAND;GWALIOR
+
+The output is as follows:
+
+* +E++++++++
+* +N++++++++
+* +GWALIOR++
+* +L++++++++
+* +A++++++++
+* +NORWAY+++
+* +D+++G++++
+* +++++R++++
+* +++++A++++
+* ++++++++++
