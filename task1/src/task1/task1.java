@@ -20,25 +20,19 @@ public class task1 {
     	// Indicate that how many words have been filled
     	int index = 0;		
     	
-    	// The string of the grid
-    	String gridStr; 
-    	
-        if(args.length == 2){ 	
+        if(args.length == DIM + 1){ 	
         	// Verify the length of arguments
-        	gridStr = args[0];
-        	words = args[1].split(";");
-        	
-        	if (gridStr.length() != DIM * DIM) {	
-        		// Verify the input grid
-        		System.out.println("Please reset the input grid.");
-        		System.exit(0);
-        	} else { 								
-        		// Split the given grid
-            	grid = new String[DIM];
-        		for (int idx = 0; idx < DIM ; idx++){
-        			grid[idx] = gridStr.substring(idx * DIM, (idx + 1)  * DIM);
-        		}
-        	}
+        	grid = new String[DIM];
+    		for (int idx = 0; idx < DIM ; idx++){
+    			if(args[idx].length() != DIM){
+    				System.out.printf("Please reset the row %d of the input grid.", idx + 1);
+            		System.exit(0);
+    			} else {
+    				grid[idx] = args[idx];
+    			}
+    		}
+    		
+        	words = args[DIM].split(";");
 
         	fillGrid(grid, words, index);
         } else{
